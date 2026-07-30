@@ -18,4 +18,5 @@ public class DeleteTaskUseCase {
         }
         repository.delete(taskid);
     }
+
 }
