@@ -1,6 +1,5 @@
 package dio.taskmanager.application.input;
 
-import dio.taskmanager.domain.Task;
 import dio.taskmanager.domain.TaskStatus;
 
 import java.util.Optional;
