@@ -1,4 +1,6 @@
 package dio.taskmanager.application.input;
 
-public record CreateTaskInput() {
+import java.util.Optional;
+
+public record CreateTaskInput(String title, Optional<String> description) {
 }

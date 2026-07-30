@@ -1,6 +1,7 @@
 package dio.taskmanager.domain;
 
-public enum TaskStaus {
+
+public enum TaskStatus {
     PENDING,
     IN_PROCESS,
     COMPLETED,
