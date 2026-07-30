@@ -10,6 +10,7 @@ import dio.taskmanager.domain.Taskid;
 import dio.taskmanager.infrastructure.repository.http.request.CreateTaskRequest;
 import dio.taskmanager.infrastructure.repository.http.request.UpdateTaskResquest;
 import dio.taskmanager.infrastructure.repository.http.response.TaskResponse;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +42,7 @@ public class Taskcontroller {
         this.updateTaskUseCase = updateTaskUseCase;
     }
     @PostMapping
-    TaskResponse create(@RequestBody CreateTaskRequest request){
+    TaskResponse create(@RequestBody @Valid CreateTaskRequest request){
         var input = request.toinput();
         var output = createTaskUseCase.execute(input);
         return TaskResponse.from(output);
